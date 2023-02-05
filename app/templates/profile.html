@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Профиль</h2>
+<div>Имя: {{user_name}}</div>
+<a href="/logout">Выйти</a>
+<h3>Пройти тест</h3>
+<form method="post">
+    <input type="text" name="test_name" placeholder="Номер теста">
+    <button type="submit">Пройти тестт</button>
+</form>
+<button onclick="window.location.href = '/create/'">Создать свой тест</button>
+<h3>Мои тесты:</h3>
+{% for test in tests %}
+<div>
+    <b>{{test.name}}</b><a href="/statistic/{{test.test_id}}">Статистика</a>
+</div>
+{% endfor %}
+{% endblock %}
