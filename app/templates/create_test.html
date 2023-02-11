@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<script src="{{ url_for('static', filename='jq.js') }}"></script>
 <script src="{{ url_for('static', filename='create_test.js') }}"></script>
 <form method="post">
-    <div>Название теста: <input name="test_name" value="Новый тест"></div><br>
+    <div id="test_name">Название теста: <input name="test_name" value="Новый тест"></div>
     <ol id="questions"></ol>
-    <button type="button" onclick="create_question()">Создать вопрос</button>
-    <button type="button" onclick="create_m_question()">Создать вопрос с несколькими правильными ответами</button>
-    <div>
-        <button type="submit">Опубликовать</button>
+    <div class="bot-btn-test">
+        <button class="btn-test" onclick="create_question()" type="button">Создать вопрос</button>
+        <button class="btn-test" type="submit">Опубликовать</button>
     </div>
 </form>
+<div class="bottom-div"> .</div>
 {% endblock %}

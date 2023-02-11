@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<table id="results">
+    {% for answer in answers %}
+    <tr>
+        <td>
+            {{answer.question_text}}
+        </td>
+        <td>
+            {{answer.answer_text}}
+        </td>
+        <td>
+            {% if answer.is_true %}
+            <div class="true">Правильно</div>
+            {% else %}
+            <div class="false">Неправильно</div>
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+    <tr>
+        <th></th>
+        <th></th>
+        <th>
+            Правильных ответов: {{result.true}} / {{result.all}}
+        </th>
+    </tr>
+</table>
+{% endblock %}

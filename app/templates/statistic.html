@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<table id="statistic-table">
+    <tr>
+        <th>Пользователь</th>
+        <th>Результат</th>
+        <th></th>
+    </tr>
+    {% for trying in tryings %}
+    <tr>
+        <td>{{trying.user_name}}</td>
+        <td>{{trying.true}} / {{trying.all}}</td>
+        <td><a href="{{url_for('results', trying_id=trying.trying_id)}}">Подробнее</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

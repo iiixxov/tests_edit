@@ -4,8 +4,8 @@ let answers = []
 function create_question() {
     let question = $(`
     <li class='question'>
-        <input name='question_text ${questions}' placeholder='Текст вопроса'>
-        <button type='button' onclick="create_answer(${questions})">Добавить ответ</button>
+        <input class="question-text" name='question_text ${questions}' placeholder='Текст вопроса'>
+        <button class="btn-test" type='button' onclick="create_answer(${questions})">Добавить ответ</button>
         <ul id='answers_${questions}'></ul>
     </li>
     `);
@@ -17,36 +17,10 @@ function create_question() {
 
 function create_answer(id) {
     let answer = $(`
-    <li>
-            <input name='answer_text ${id} ${answers[id - 1]}' placeholder='Текст ответа'>
-            Верный:
-            <input name='answer_is_true ${id}' type='radio' value='${answers[id - 1]}'>
-    </li>
-    `);
-    $(`#answers_${id}`).append(answer);
-    answers[id - 1]++;
-}
-
-function create_m_question() {
-    let question = $(`
-    <li class='question'>
-        <input name='multi_question_text ${questions}' placeholder='Текст вопроса'>
-        <button type='button' onclick="create_m_answer(${questions})">Добавить ответ</button>
-        <ul id='answers_${questions}'></ul>
-    </li>
-    `);
-
-    $('#questions').append(question);
-    questions++;
-    answers.push(1)
-}
-
-function create_m_answer(id) {
-    let answer = $(`
-    <li>
-            <input name='answer_text ${id} ${answers[id - 1]}' placeholder='Текст ответа'>
-            Верный:
-            <input name='answer_is_true ${id} ${answers[id - 1]}' type='checkbox'>
+    <li class="answer">
+            <input class="answer-name" name='answer_text ${id} ${answers[id - 1]}' placeholder='Текст ответа'>
+            <input name='answer_is_true ${id}' type='radio' value='${answers[id - 1]}' checked>
+            <label for="answer_is_true ${id}">Верный</label>
     </li>
     `);
     $(`#answers_${id}`).append(answer);

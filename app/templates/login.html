@@ -1,10 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-<h3>Вход</h3>
-<form method="post" name="login">
+<form id="login-form" method="post" name="login">
     <input placeholder="Имя" name="login"><br>
     <input placeholder="Пароль" name="password" type="password"><br>
     <button type="submit">Войти</button>
+    <p>{{ login_response }}</p>
 </form>
-<p>{{ login_response }}</p>
 {% endblock %}

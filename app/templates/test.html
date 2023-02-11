@@ -1,19 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>{{ test_name }}</h2>
-<form method="post" name="q">
+<div id="test-header">
+    <h2>{{ test_name }}</h2>
+    <p>Тест пользователя <b>{{user_name}}</b></p>
+</div>
+<form action="{{ url_for('save') }}" id="test-form" method="post" name="q">
+    <input hidden name="test_id" readonly value="{{test_id}}">
     {% for question in questions %}
     <div class="question">
         <h3>{{ question.text }}</h3>
         {% for answer in question.answers %}
-            <input type="{% if question.multiple %}checkbox{% else %}radio{% endif %}" name="r_{{question.n}}">
-            {{ answer }}
-            <br>
+        <input name="radio {{question.id}}" type="radio" value="{{answer.id}}">
+        <label>{{ answer.text }}</label>
+        <br>
         {% endfor %}
     </div>
     {% endfor %}
     <br>
     <button type="submit">Отправить</button>
+    <p>Результаты прохождения созданого вами теста не будут сохранены.</p>
 </form>
 
 {% endblock %}

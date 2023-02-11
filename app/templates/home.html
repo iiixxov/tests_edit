@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="description">
+    <b>Сайт, где вы можете создавать и проходить тесты.</b><br>
+    Выполнил студент группы И-03 Велигжанин Семён
+</div>
+<div class="d2">
+    <input id="test" placeholder="Введите номер теста">
+    <button onclick="window.location.href = `/test/${$('#test').val()}`">&#8594;</button>
+</div>
+{% endblock %}

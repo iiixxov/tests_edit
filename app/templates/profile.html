@@ -1,18 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>Профиль</h2>
-<div>Имя: {{user_name}}</div>
-<a href="/logout">Выйти</a>
-<h3>Пройти тест</h3>
-<form method="post">
-    <input type="text" name="test_name" placeholder="Номер теста">
-    <button type="submit">Пройти тестт</button>
-</form>
-<button onclick="window.location.href = '/create/'">Создать свой тест</button>
-<h3>Мои тесты:</h3>
-{% for test in tests %}
-<div>
-    <b>{{test.name}}</b><a href="/statistic/{{test.test_id}}">Статистика</a>
-</div>
-{% endfor %}
+<table id="tests">
+    {% for test in tests %}
+    <tr>
+        <td>({{test.test_id}})</td>
+        <td><b>{{test.name}}</b></td>
+        <td><a class="table-btn" href="/test/{{test.test_id}}">Посмотреть</a></td>
+        <td><a class="table-btn" href="/statistic/{{test.test_id}}">Статистика</a></td>
+        <td><a class="table-btn" href="{{url_for('delete', test_id=test.test_id)}}">Удалить</a></td>
+    </tr>
+    {% endfor %}
+</table>
 {% endblock %}

@@ -3,14 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>ТЕСТЫ.РУ</title>
-    <style>
-        .header{
-            color: gray;
-        }
-    </style>
+    <link href="{{url_for('static', filename='base.css')}}" rel="stylesheet">
+    <script src="{{ url_for('static', filename='jq.js') }}"></script>
 </head>
 <body>
-<h1 class="header">ТЕСТЫ.РУ</h1>
-{% block content %}{% endblock %}
+<div id="user">
+    {% if user %}
+    <p><b>{{user}}</b></p>
+    <a href="{{url_for('logout')}}">Выйти</a>
+    {% else %}
+    <a href="{{url_for('login', locate='profile')}}">Войти</a>
+    {% endif %}
+</div>
+<div id="header">ТЕСТЫ.РУ</div>
+<ul class="menu-main">
+    <li><a href="/">Пройти тест</a></li>
+    <li><a href="/create/">Создать тест</a></li>
+    <li><a href="/profile/">Мои тесты</a></li>
+</ul>
+<div id="base">
+    {% block content %}{% endblock %}
+</div>
 </body>
 </html>

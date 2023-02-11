@@ -1,0 +1,321 @@
+#base {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#header {
+    text-align: center;
+    margin: 0 34px 0 30px;
+    font-size: 46px;
+    color: #686461;
+}
+
+.menu-main {
+    list-style: none;
+    margin: 40px 0 5px;
+    text-align: center;
+    background: white;
+}
+
+.menu-main li {
+    display: inline-block;
+}
+
+.menu-main li:last-child:after {
+    content: none;
+}
+
+.menu-main a {
+    text-decoration: none;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 34px 0 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .1s;
+}
+
+.menu-main a, .menu-main a:visited {
+    color: #9d999d;
+}
+
+.menu-main a.current, .menu-main a:hover {
+    color: #4F6C77;
+}
+
+#description {
+    text-align: center;
+    font-size: 20px;
+    color: #72747a;
+}
+
+.d2 * {
+    box-sizing: border-box;
+}
+
+.d2 {
+    position: relative;
+    width: 300px;
+    margin: 30px auto;
+    background: #4F6C77;
+}
+
+.d2 input, .d2 button {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.d2 input {
+    width: 100%;
+    height: 42px;
+    padding-left: 15px;
+    color: azure;
+    font-size: 14px;
+}
+
+.d2 button {
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.d2 button:before {
+    font-size: 16px;
+    color: #4F6C77;
+}
+
+#user {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#tests, #results, #statistic-table {
+    width: 100%;
+    border: none;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#tests tbody td, #results tbody td, #statistic-table tbody td {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #686461;
+    border-top: 1px solid #9d999d;
+    border-bottom: 1px solid #9d999d;
+    text-align: center;
+}
+
+#results th, #statistic-table th {
+    padding: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #686461;
+    border-top: 2px solid #716561;
+    border-bottom: 2px solid #716561;
+}
+
+.table-btn, #statistic-table a {
+    position: relative;
+    margin: 0 34px 0 30px;
+    text-decoration: none;
+    color: #9d999d;
+}
+
+.table-btn:hover, #statistic-table a:hover {
+    color: #4F6C77;
+}
+
+#test_name {
+    position: relative;
+    width: 300px;
+    margin: 30px auto;
+    font-size: 21px;
+    color: #686461;
+    text-align: center;
+}
+
+#test_name * {
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+#test_name input {
+    width: 100%;
+    height: 42px;
+    padding-left: 15px;
+    background: #4F6C77;
+    color: azure;
+    font-size: 14px;
+}
+
+.btn-test {
+    outline: none; /* Для синий ободки */
+    border: 0;
+    background: transparent;
+    font-size: 18px;
+    color: #9d999d;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.bot-btn-test {
+    position: relative;
+    width: 450px;
+    margin: 0 auto;
+}
+
+.btn-test:hover {
+    color: #4F6C77;
+}
+
+.question {
+    position: relative;
+    width: 700px;
+    margin: auto;
+    padding: 30px;
+}
+
+.question-text {
+    width: 60%;
+    border: none;
+    outline: none;
+    height: 42px;
+    padding-left: 15px;
+    background: #9EABB3;
+}
+
+.answer-name {
+    width: 380px;
+    border: none;
+    outline: none;
+    height: 42px;
+    padding-left: 15px;
+}
+
+.answer:nth-child(2n) input {
+    background: #EAEEEF;
+}
+
+.answer:nth-child(2n+1) input {
+    background: #dcdce1;
+}
+
+.answer input[type=radio] + label {
+    color: white;
+}
+
+.answer input[type=radio]:checked + label {
+    color: #9EABB3;
+    letter-spacing: 2px;
+}
+
+#login-form {
+
+    margin-top: 40px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#login-form input {
+    background: #4F6C77;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    color: azure;
+    font-size: 14px;
+}
+
+#login-form button {
+    outline: none; /* Для синий ободки */
+    padding-top: 10px;
+    border: 0;
+    background: transparent;
+    font-size: 18px;
+    color: #9d999d;
+    text-align: center;
+    width: 100%;
+}
+
+#login-form button:hover {
+    color: #4F6C77;
+}
+
+#login-form p {
+    text-align: center;
+}
+
+#user {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    padding-right: 17px;
+    padding-left: 17px;
+    padding-bottom: 17px;
+    border: 1px solid #686461;
+}
+
+#user p {
+    color: #4F6C77;
+    font-size: 18px;
+}
+
+#user a {
+    text-decoration: none;
+    color: #9d999d;
+}
+
+#user a:hover {
+    color: #4F6C77;
+}
+
+.bottom-div {
+    padding-top: 300px;
+}
+
+#test-header {
+    text-align: center;
+    color: #686461;
+}
+
+#test-form {
+
+}
+
+#test-form button {
+    width: 100%;
+    background: transparent;
+    font-size: 22px;
+    text-align: center;
+    border: none;
+    color: #9d999d;
+    padding: 7px;
+}
+
+#test-form button:hover {
+    color: #4F6C77;
+}
+
+#test-form p {
+    text-align: center;
+    color: #686461;
+}
+
+.question h3, .question label {
+    color: #686461;
+}
