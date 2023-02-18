@@ -2,7 +2,7 @@ import sqlite3
 
 
 def _exec(sql: str):
-    connection = sqlite3.connect('forms.sqlite')
+    connection = sqlite3.connect('form.sqlite')
     cursor = connection.cursor()
     result = cursor.execute(sql)
     connection.commit()

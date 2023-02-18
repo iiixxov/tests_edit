@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="forms" uuid="647cea1e-7543-45f1-8233-4ba9c93a5c4c">
+    <data-source source="LOCAL" name="form.sqlite" uuid="3853fb8b-f22d-4613-b6fc-62508d403475">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\veligzhanin.2020\PycharmProjects\tests_edit\forms.sqlite</jdbc-url>
+      <jdbc-url>jdbc:sqlite:D:/Users/veligzhanin.2020/PycharmProjects/tests_edit/form.sqlite</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.39.2/sqlite-jdbc-3.39.2.jar</url>
-        </library>
-      </libraries>
     </data-source>
   </component>
 </project>
