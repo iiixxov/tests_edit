@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 <table id="results">
+    <tr>
+        <th>
+            Правильных ответов: {{result.true}} / {{result.all}}
+        </th>
+        <th></th>
+        <th></th>
+    </tr>
     {% for answer in answers %}
     <tr>
         <td>
@@ -18,12 +25,5 @@
         </td>
     </tr>
     {% endfor %}
-    <tr>
-        <th></th>
-        <th></th>
-        <th>
-            Правильных ответов: {{result.true}} / {{result.all}}
-        </th>
-    </tr>
 </table>
 {% endblock %}

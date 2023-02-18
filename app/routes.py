@@ -70,8 +70,10 @@ def statistic(test_id):
     if not db.test_permission(session['user_id'], test_id):
         abort(404)
 
-    return render_template('statistic.html', user=db.get_user_name_by_id(session['user_id']),
-                           tryings=db.get_tryings_by_test_id(test_id))
+    return render_template('statistic.html',
+                           user=db.get_user_name_by_id(session['user_id']),
+                           tryings=db.get_tryings_by_test_id(test_id),
+                           avg_result=db.get_avg_results(test_id))
 
 
 @app.route('/save/', methods=['GET', 'POST'])

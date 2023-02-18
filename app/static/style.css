@@ -319,3 +319,15 @@
 .question h3, .question label {
     color: #686461;
 }
+
+.statistic {
+    color: #686461;
+}
+
+.false {
+    color: brown;
+}
+
+.true {
+    color: #4F6C77;
+}
